@@ -1,0 +1,20 @@
+1. Membuat model dan migrations
+    php artisan make:model Buku -m [ comand ]
+
+2. Isi bagian model dengan table yang ingin dibuat.
+   gunakan syntax $fillable untuk menentukan coloum yg dapat di isi .
+
+3. lakukan pengaturan paada Migrations.
+   public function up(): void
+    {
+        Schema::create('buku', function (Blueprint $table) {
+            $table->id();
+            $table->string('judul');
+            $table->string('pengarang');
+            $table->string('tangal_publikasi');
+            $table->timestamps();
+            [# masukan nama table yang diperlukan #]
+        });
+    }
+
+4. php artisan migrate [ comand ]
