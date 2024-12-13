@@ -18,3 +18,21 @@
     }
 
 4. php artisan migrate [ comand ]
+
+-----------------------------------------------------
+# SEEDER
+
+php artisan make:seeder BukuSeeder [ comand ]
+
+ public function run(): void
+    {
+        $faker = \Faker\Factory::create('id_ID');
+        for ($i=0; $i < 10; $i++)  {
+            Buku::create([
+                'judul' =>$faker->sentence,
+                'pengarang' => $faker->name,
+                'tangal_publikasi' => $faker->date
+            ]);}}
+
+php artisan db:seed --class=BukuSeeder [ comand ]
+====================================================

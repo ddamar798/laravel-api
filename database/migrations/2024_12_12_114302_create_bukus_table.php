@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('judul');
             $table->string('pengarang');
-            $table->string('tangal_publikasi');
+            $table->date('tangal_publikasi');
             $table->timestamps();
         });
     }
