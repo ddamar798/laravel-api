@@ -36,3 +36,6 @@ php artisan make:seeder BukuSeeder [ comand ]
 
 php artisan db:seed --class=BukuSeeder [ comand ]
 ====================================================
+
+----------------------------------------------------
+php artisan make:controller Api\BukuController --api [ comand]
